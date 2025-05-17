@@ -11,7 +11,7 @@ interface MenuItem {
 const { items } = Astro.props;
 ---
 
-<nav>
+<nav class="top-menu">
 	<ul>
 		{
 			items.map((i) => (
@@ -24,12 +24,12 @@ const { items } = Astro.props;
 </nav>
 
 <style>
-	nav ul {
+	.top-menu ul {
 		list-style-type: none;
 		padding: 0em;
 		margin: 0.375em 0em;
 	}
-	li {
+	.top-menu li {
 		display: inline-block;
 		margin: 0.375em;
 		padding: 0.375em;
