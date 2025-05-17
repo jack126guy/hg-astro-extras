@@ -8,9 +8,12 @@
     "preview": "astro preview",
     "astro": "astro"
   },
-  "dependencies": {
+  "devDependencies": {
     "astro": "^5.7.13",
     "@astrojs/check": "^0.9.4",
     "typescript": "^5.8.3"
+  },
+  "peerDependencies": {
+    "astro": "^4.0.0 || ^5.0.0"
   }
 }
