@@ -2,6 +2,10 @@
 	"name": "@halfgray/hg-astro-extras",
 	"type": "module",
 	"version": "0.0.1",
+	"exports": {
+		".": "./index.ts"
+	},
+	"files": ["src/components", "index.ts"],
 	"scripts": {
 		"dev": "astro dev",
 		"check": "astro check",

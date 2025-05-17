@@ -1,0 +1,33 @@
+---
+interface Props {
+	items: MenuItem[];
+}
+
+interface MenuItem {
+	name: string;
+	link: string;
+}
+
+const { items } = Astro.props;
+---
+
+<nav>
+	<ul>
+		{items.map(i => <li><a href={i.link}>{i.name}</a></li>)}
+	</ul>
+</nav>
+
+<style>
+	nav ul {
+		list-style-type: none;
+		padding: 0em;
+		margin: 0.375em 0em;
+	}
+	li {
+		display: inline-block;
+		margin: 0.375em;
+		padding: 0.375em;
+		border-width: thin;
+		border-style: solid;
+	}
+</style>
