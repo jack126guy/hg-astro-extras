@@ -1,0 +1,49 @@
+---
+import TopMenu from '@/components/TopMenu.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+
+interface Props {
+	title: string;
+}
+
+const menuItems = [
+	{ name: 'Main', link: '/' },
+	{ name: 'Other Example', link: '/other/example/' },
+];
+
+const sections = [
+	{ name: 'Main', prefix: '/' },
+	{ name: 'Other', prefix: '/other/' },
+];
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>{title} | HG Astro Extras</title>
+	</head>
+	<body>
+		<header>
+			<TopMenu items={menuItems} />
+			<Breadcrumbs sections={sections} currentTitle={title} />
+		</header>
+		<main>
+			<h1>{title}</h1>
+			<slot />
+		</main>
+	</body>
+</html>
+
+<style>
+	body {
+		margin: 0em auto;
+		padding: 0.75em;
+		max-width: 50em;
+		font-family: sans-serif;
+		line-height: 1.5;
+	}
+</style>
