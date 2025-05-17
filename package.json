@@ -6,6 +6,7 @@
 		".": "./index.ts"
 	},
 	"files": ["src/components", "index.ts"],
+	"keywords": ["astro-component"],
 	"scripts": {
 		"dev": "astro dev",
 		"check": "astro check",
