@@ -22,13 +22,7 @@ const sectionBreadcrumbs = sections.filter(
 			sectionBreadcrumbs.map((b) => (
 				<li>{<a href={b.prefix}>{b.name}</a>}</li>
 			))
-		}{
-			(
-				<li>
-					<b aria-current="page">{currentTitle}</b>
-				</li>
-			)
-		}
+		}{(<li>{<b aria-current="page">{currentTitle}</b>}</li>)}
 	</ol>
 </nav>
 
