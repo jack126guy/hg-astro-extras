@@ -36,4 +36,9 @@ const { items } = Astro.props;
 		border-width: thin;
 		border-style: solid;
 	}
+	@media print {
+		.top-menu {
+			display: none;
+		}
+	}
 </style>
